@@ -116,8 +116,8 @@ def train():
         writer.add_scalar('val_loss', val(val_loader), epoch)
             
         if (epoch+1)%10==0:
-            torch.save(model.state_dict(), "saved_model/model_%d.pth"%(epoch))
-            torch.save(opt.state_dict(), "saved_model/opt_%d.pth"%(epoch))
+            torch.save(model.state_dict(), "saved_models/model_%d.pth"%(epoch))
+            torch.save(opt.state_dict(), "saved_models/opt_%d.pth"%(epoch))
 
 
     config.date_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
