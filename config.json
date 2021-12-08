@@ -1,0 +1,20 @@
+{
+    "date_time": "",
+    "arch": {
+        "model": "ResUNet",
+        "out_channels": 1,
+        "params": 0
+    },
+    "data_loader": {
+        "root" : "dataset/opg-250/",
+        "train_split": 0.9,
+        "batch_size": 16,
+        "num_workers": 34
+    },
+    "trainer": {
+        "epoch": 400,
+        "loss": "nn.BCELoss",
+        "opt": "optim.Adam",
+        "lr": 0.0001
+    }
+}
